@@ -5,6 +5,37 @@
     <title>Opret konsultation</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="rekcss.css">
+
+<script>
+    async function opretKonsultation(){
+
+        let form = document.getElementById("aftaleform");
+        let formData = new FormData(form)
+        let patientJson = Object.fromEntries(formData);
+        let res = await fetch("rest/aftaler", {
+            method:"POST",
+            body: JSON.stringify(patientJson),
+            headers:{
+                'content-type':"application/json"
+            }
+        })
+    }
+
+    async function hentKonsultation(){
+
+        let form = document.getElementById("aftaleform");
+        let formData = new FormData(form)
+        let patientJson = Object.fromEntries(formData);
+        let res = await fetch("rest/aftaler", {
+            method:"POST",
+            body: JSON.stringify(patientJson),
+            headers:{
+                'content-type':"application/json"
+            }
+        })
+    }
+</script>
+
 </head>
 <body>
 <!--
@@ -26,6 +57,14 @@ div class="header" id="myHeader">
 <div>
     <p class="overskriftside"> Opret konsultation</p>
 </div>
+
+<form id="aftaleform">
+    <input type="date" name="date">
+    <input type="text" name="cpr">
+</form>
+
+<button onclick="opretKonsultation();">Opret konsultation</button>
+<button onclick="hentKonsultation();">Hent konsultation</button>
 
 <div class="tekstoverskrift">
     <text id="piOverskrift">Patient info</text>
