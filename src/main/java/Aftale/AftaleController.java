@@ -6,4 +6,5 @@ public class AftaleController {
     public void saveAftale(Aftale nyAftale) {
         aftaleDAO.addAftale(nyAftale);
     }
+
 }

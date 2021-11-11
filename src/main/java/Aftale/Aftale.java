@@ -23,6 +23,4 @@ public class Aftale {
         this.cpr = cpr;
     }
 
-
-
 }
