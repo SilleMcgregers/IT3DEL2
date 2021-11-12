@@ -20,5 +20,4 @@ public class PatientService {
         System.out.println(patient);
         patientController.addPatient(patient);
     }
-
 }

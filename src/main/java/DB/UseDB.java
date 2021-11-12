@@ -15,10 +15,8 @@ import java.time.LocalDateTime;
 public class UseDB {
         public static void main(String[] args) throws InterruptedException {
             DBConnector dbc = new DBConnector();
-            Connection conn = dbc.getMYSQLConnection("pauline", "Pauline1234", "gruppe4");
-            ConnectionUser cu = new ConnectionUser(conn);
+            Connection conn = dbc.getMYSQLConnection("pauline", "Pauline1234", "sundtek");
+            ConnectionUser1 cu = new ConnectionUser1(conn);
             String dato;
-
         }
-
 }

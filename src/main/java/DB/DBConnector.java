@@ -10,7 +10,7 @@ public class DBConnector {
         private static String MYSQLDriver = "jdbc:mysql://" + "localhost:3306/";
         private static String url;
 
-        public Connection getMYSQLConnection(String username, String password, String Schema) {
+        public Connection getMYSQLConnection(String username, String password, String Schema){
             url = MYSQLDriver + Schema + "?serverTimezone=Europe/Amsterdam&amp";
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
@@ -26,5 +26,4 @@ public class DBConnector {
         }
     }
 
-}
 
