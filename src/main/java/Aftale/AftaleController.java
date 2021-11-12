@@ -1,7 +1,10 @@
 package Aftale;
 
+import java.util.List;
+
 public class AftaleController {
-    private static AftaleDAO aftaleDAO = new AftaleDAO();
+    private AftaleDAO aftaleDAO = new AftaleDAO();
+    public List<Aftale> getAftale() {return aftaleDAO.getAftale();}
 
     public void saveAftale(Aftale nyAftale) {
         aftaleDAO.addAftale(nyAftale);

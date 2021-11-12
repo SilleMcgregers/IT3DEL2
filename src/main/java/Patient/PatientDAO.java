@@ -8,9 +8,7 @@ public class PatientDAO {
     private static List<Patient> patientListe = new ArrayList<>();
 
     public PatientDAO(){
-        Patient patient = new Patient();
-        patient.setName("Sille");
-        patientListe.add(patient);
+
     }
     public List<Patient> getPatients() {
         //TODO Hent patienter fra database
